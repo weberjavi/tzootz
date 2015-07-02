@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="icono" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="24px" height="24px" viewBox="0 0 24 24" opacity="0.5">
+	 <style>
+	 	#icono:hover{
+	 		opacity:1;
+	 	}
+
+	</style>
+	<a xlink:href="../index.html" target="_blank" >
+		<path id="fondo" fill="#000000" d="M12,23.857c6.528,0,11.821-5.294,11.821-11.823S18.528,0.214,12,0.214
+			c-6.53,0-11.822,5.292-11.822,11.821S5.471,23.857,12,23.857"/>
+		<path id="letra" fill="#FFFFFF" d="M9.016,10.01h1.237V8.808c0-0.53,0.013-1.348,0.399-1.854c0.406-0.536,0.962-0.9,1.919-0.9
+			c1.561,0,2.218,0.223,2.218,0.223l-0.311,1.833c0,0-0.515-0.15-0.995-0.15c-0.481,0-0.913,0.173-0.913,0.653v1.397h1.973
+			l-0.138,1.79h-1.835v6.218h-2.318V11.8H9.016V10.01z"/>
+	</a>
+</svg>

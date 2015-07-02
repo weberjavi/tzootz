@@ -86,7 +86,7 @@ video {
 /**/
 a{
 	text-decoration: none;
-}
+}	 
 
 /*
 	ADELANTE CON LA METRALLA (⌐■_■)--︻╦╤─ - - - (╥﹏╥) 
@@ -99,12 +99,29 @@ body{
 	height: 100vh;
 	font-family: 'Josefin Sans', sans-serif;
 }
+/******************************
+		LANDING
+*******************************/
 .portada{
 	width: 100%;
 	width: 100vw;
 	height: 100%;
 	height: 100vh;
 }
+.idiomas a{
+    color: rgba(255,0,0,0.7);
+}
+.idiomas a:hover{
+    color: rgba(0,0,0,0.7);
+}
+.idiomas{
+	position: relative;
+	left: 50%;
+	margin-top: 20px;
+}
+/*****************************
+		HOME
+*****************************/
 .nav_secciones{
 	position: absolute;
 	top: 20px;
@@ -119,10 +136,18 @@ body{
 	-webkit-transform:translateX(-50%);
 	transform:translateX(-50%);
 }
+.seccion_meta{
+	vertical-align: super;
+}
+.iconos{
+	display: inline;
+}
+.seccion_meta,
 .seccion{
 	padding: 0px 10px;
 	color: rgba(140,140,140,1);
 }
+.seccion_meta:hover,
 .seccion:hover{
 	color: black;
 }
@@ -148,42 +173,27 @@ body{
 .logo_peque img{
 	width: 80px;
 }
-.barco{
-	position: absolute;
-	top:10px;
-	left: 10px;
-}
-.barco img{
-	width: 50px;
-}
+
 /*********************************
 			MANIFESTO
 **********************************/
-.manifesto{
-	position: absolute;
-	bottom: -100%;
-	width: 100vw;
-	height: 100vh;
-	background-color: white;
-	/*color: white;*/
-	border-top: 2px solid black;
-	z-index: 100;
-}
 .titulo_manifesto{
 	display: none;
+	text-transform: uppercase;
 	position: absolute;
 	top: 25%;
-	left: calc(50% - 40px);
+	left: calc(50% - 70px);
 	color: red;
-	width: 80px;
-	font-size: 1.5em;
+	width: 140px;
+	font-size: 24px;
 	font-weight: 300;
 }
 .texto_manifesto{
 	display: none;
+	text-align: justify;
 	position: absolute;
 	top: 30%;
-	left: calc(50% - 150px);
+	left: calc(50% - 200px);
 	font-size: 1.2em;
 	font-weight: 400;
 	width: 400px;
@@ -194,7 +204,13 @@ body{
 	right: 30px;
 	color: red;
 }
-
+#musica{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: red;
+	cursor: pointer;
+}
 
 
 

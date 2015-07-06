@@ -28,7 +28,6 @@ window.onload = function() {
   var visitaArtista = $(".visita_artista");
   var artista = $(".artista");
 
-  artista.velocity( 'transition.slideUpIn' );
   artista.mouseenter(function() {
     $(".visita_artista",this).velocity( 'transition.slideUpIn' );
     $(".titulo_artista",this).velocity( 'transition.slideDownIn' );
@@ -68,9 +67,6 @@ window.onload = function() {
   crackin.mouseleave(function() {
     tema_crackin.pause()
   });
-
-
-
 
 
 

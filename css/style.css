@@ -128,6 +128,12 @@ body{
 	right: 20px;
 	font-weight: 300;
 }
+.nav_secciones_interior{
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	font-weight: 300;
+}
 
 .nav_footer{
 	font-weight:300;
@@ -190,6 +196,7 @@ body{
 	font-weight: 300;
 }
 .texto_manifesto{
+	font-family:'Rokkitt', serif;
 	display: none;
 	text-align: justify;
 	position: absolute;
@@ -213,7 +220,7 @@ body{
 	cursor: pointer;
 }
 /*********************************
-			ARTISTAS
+			GRID ARTISTAS
 **********************************/
 .grid_artistas{
 	width: 980px;
@@ -261,6 +268,44 @@ body{
 	cursor: pointer;
 	left: 20% ;
 }
+/*********************************
+			PÁGINA ARTISTA
+**********************************/
+
+.contenedor_artista{
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 150px 20px 0px 20px;
+}
+.artista_interior{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin: 10px; 
+	overflow: hidden;
+}
+.nombre_artista{
+	font-family: 'Josefin Sans', sans-serif;
+	color: red;
+	font-size: 2.4em;
+	font-weight: 600;
+	line-height: 1.7em;
+}
+.lineas{
+	font-weight: 300;
+}
+.texto_artista{
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 10px;
+	font-weight: 300;
+	font-family:'Rokkitt', serif;
+}
+.souncloud_player{
+	margin-top: 10px !important;
+	float: right !important;
+}
 
 /**********************************************************
 	Clases para manejar los efectos del plugin tilt.js
@@ -294,6 +339,9 @@ body{
 	top: 0;
 	left: 0;
 }
+/***********************
+SOUNDCLOUD PLAYER
+************************/
 
 
 

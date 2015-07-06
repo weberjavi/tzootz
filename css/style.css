@@ -92,7 +92,7 @@ a{
 	ADELANTE CON LA METRALLA (⌐■_■)--︻╦╤─ - - - (╥﹏╥) 
 */
 body{
-	overflow-y:hidden; 
+	
 	width: 100%;
 	width: 100vw;
 	height: 100%;
@@ -128,10 +128,11 @@ body{
 	right: 20px;
 	font-weight: 300;
 }
-.nav_meta{
+
+.nav_footer{
 	font-weight:300;
-	position: absolute;
-	bottom: 20px;
+	position: fixed;
+	bottom: 0px;
 	left: 50%;
 	-webkit-transform:translateX(-50%);
 	transform:translateX(-50%);
@@ -211,13 +212,88 @@ body{
 	color: red;
 	cursor: pointer;
 }
+/*********************************
+			ARTISTAS
+**********************************/
+.grid_artistas{
+	width: 980px;
+	height: auto;
+	margin: 0px auto;
+	padding-top: 150px;
+}
+.artista{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin: 10px; 
+	overflow: hidden;
+	-webkit-filter: grayscale(100%) brightness(105%) contrast(90%);
+	filter: grayscale(100%) brightness(105%) contrast(90%);
+}
 
+.artista:hover {
+	-webkit-filter: none;
+	filter: none;
+}
+.artista h3{
+	position: absolute;
+	display: none;
+	color: red;
+	bottom: 200px;
+	font-weight: 700;
+	font-size: 2em;
+	z-index: 200;
+	left: 50%;
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+}
+.artista a{
+	display: none;
+	position: absolute;
+	color: white;
+	bottom: 100px;
+	font-weight: 700;
+	font-size: 2em;
+	z-index: 200;
+	padding: 3px;
+	border: 2px solid white;
+	cursor: pointer;
+	left: 20% ;
+}
 
+/**********************************************************
+	Clases para manejar los efectos del plugin tilt.js
+	http://tympanus.net/codrops/2015/05/28/image-tilt-effect/comment-page-1/#comments
+**********************************************************/
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
 
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
 
+.tilt__back {
+	position: relative;
+}
 
-
-
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 
 

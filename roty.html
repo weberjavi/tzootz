@@ -45,12 +45,14 @@
 			<!--a href="#" class="seccion_meta shop">Social</a-->
 		</div>	
 		<div class="contenedor_artista">
+			
 			<div class="artista_interior">
 				<img class="" src="img/roty340.jpg" alt="Fotografía de Roty 340">
 			</div>
-			<iframe class="souncloud_player"  width="300" height="60" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/177625&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_artwork=false&amp;visual=false"></iframe>
+			
 			<div class="texto_artista">
-				<span class="nombre_artista">Roty 340<span class="lineas">//</span></span>
+				<span class="nombre_artista">Roty 340<span class="lineas"></span></span>
+				<div id="player"></div>
 				<p>Roty340 es el seudónimo más popular del prolífico compositor de música nacido en Vigo, al que también se le conoce bajo otros nombres como Blasco Etchegaray, Fabiu$$ o Sirimiki de la Menardier …
 ¿Conflictos de personalidad? En absoluto. Para Roty340 la búsqueda del reto y la experimentación a través de la simultaneidad de proyectos es una constante. Desde que comienza su andadura musical en el campo de la electrónica allá por 1996, Roty340 ha deambulado por los caminos de la vanguardia, indagando e investigando en la creación musical para lograr un sonido cada vez más maduro y propio. Su discografía mas destacable es la saga “Volumen Global” en sus 2 volumenes, de 1999 y 2002 respectivamente; el vinilo blanco Delicatessen, editado por Superego en 2001 el cual tuvo importantes ventas en Japon y el álbum TZOOTZ EXTERMINIO MENTAL de 2004 dejando con este último huella en la historia de la electrónica patria.</p>
 
@@ -61,11 +63,37 @@
 <p>En la actualidad sus composiciones se acercan a los generos clasicos, electronica, Vanguardia y la Banda sonora con una raiz DUB y HipHop y en sus sets como DJ su sonido es un compendio cross-over de casi cualquier cosa o genero posible.</p>
 			</div>
 		</div>
-	</div><!-- fin portada -->	
+	</div><!-- fin portada -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/velocity.min.js"></script>
 <script type="text/javascript" src="js/velocity.ui.min.js"></script>
 <script type="text/javascript" src="js/tilt.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script>
+    (function() {
+        var script = document.createElement("script");
+
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "http://sd.toneden.io/production/toneden.loader.js"
+
+        var entry = document.getElementsByTagName("script")[0];
+        entry.parentNode.insertBefore(script, entry);
+    }());
+
+    ToneDenReady = window.ToneDenReady || [];
+    ToneDenReady.push(function() {
+        // This is where all the action happens:
+        ToneDen.player.create({
+            dom: "#player",
+            skin: "light",
+            tracksPerArtist: 6,
+            mini:true,
+            urls: [
+                "https://soundcloud.com/tzootz/sets/roty340tm"
+            ]
+        });
+    });
+</script>
 </html>

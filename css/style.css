@@ -286,6 +286,7 @@ body{
 	overflow: hidden;
 }
 .nombre_artista{
+	display: inline-block;
 	font-family: 'Josefin Sans', sans-serif;
 	color: red;
 	font-size: 2.4em;
@@ -294,6 +295,7 @@ body{
 }
 .lineas{
 	font-weight: 300;
+	color: black;
 }
 .texto_artista{
 	display: inline-block;
@@ -342,16 +344,35 @@ body{
 /***********************
 SOUNDCLOUD PLAYER
 ************************/
-
-
-
-
-
-
-
-
-
-
+#player{
+	display: inline-block;
+  position: relative;
+  width: 100px;
+  z-index: 500;
+  height: 60px;
+  padding-top: 18px;
+  margin-left: 15px;
+}
+.mini-scrubber,
+.start-time,
+.stop-time,
+.mini-connect,
+.mini-info,
+.mini-social{
+	display: none !important;
+}
+ .slider{
+	position: absolute;
+	height: 20px;
+	color: red;
+	top:10px;
+}
+.td.player.light {
+  border:none;
+}
+.controls i{
+	color:rgba(0,0,0,0.6);
+}
 
 
 

@@ -27,6 +27,7 @@
 			<a href="artistas.html" class="seccion label seleccionada">Artistas</a>
 			<a href="filmografia.html" class="seccion pictures">Filmografía</a>
 			<a href="tienda.html" class="seccion ost">Tienda</a>
+			<!--a href="blog.html" class="seccion misc">Art/Misc</a-->
 			<a href="contacto.html" class="seccion contacto">Contacto</a>
 		</div>
 		<div class="nav_secciones_interior">
@@ -47,10 +48,10 @@
 			<div class="artista_interior">
 				<img class="" src="img/RafaPerezQuartet.jpg" alt="Fotografía de Roty 340">
 			</div>
-
-			<iframe class="souncloud_player" width="450" height="300" scrolling="no" font="Rokkitt"frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170094872&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+			
 			<div class="texto_artista">
-				<span class="nombre_artista">Rafa Pérez Quartet<span class="lineas">//</span></span>
+				<span class="nombre_artista">Rafa Pérez Quartet<span class="lineas"></span></span>
+				<div id="player"></div>
 				<p>Roty340 es el seudónimo más popular del prolífico compositor de música nacido en Vigo, al que también se le conoce bajo otros nombres como Blasco Etchegaray, Fabiu$$ o Sirimiki de la Menardier …
 ¿Conflictos de personalidad? En absoluto. Para Roty340 la búsqueda del reto y la experimentación a través de la simultaneidad de proyectos es una constante. Desde que comienza su andadura musical en el campo de la electrónica allá por 1996, Roty340 ha deambulado por los caminos de la vanguardia, indagando e investigando en la creación musical para lograr un sonido cada vez más maduro y propio. Su discografía mas destacable es la saga “Volumen Global” en sus 2 volumenes, de 1999 y 2002 respectivamente; el vinilo blanco Delicatessen, editado por Superego en 2001 el cual tuvo importantes ventas en Japon y el álbum TZOOTZ EXTERMINIO MENTAL de 2004 dejando con este último huella en la historia de la electrónica patria.</p>
 
@@ -68,4 +69,34 @@
 <script type="text/javascript" src="js/velocity.ui.min.js"></script>
 <script type="text/javascript" src="js/tilt.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script>
+/*******************************************************************************
+Los documentos sobre la API del reproductor de toneden se pueden consultar en:
+					https://github.com/ToneDen/toneden-sdk
+*********************************************************************************/
+    (function() {
+        var script = document.createElement("script");
+
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "http://sd.toneden.io/production/toneden.loader.js"
+
+        var entry = document.getElementsByTagName("script")[0];
+        entry.parentNode.insertBefore(script, entry);
+    }());
+
+    ToneDenReady = window.ToneDenReady || [];
+    ToneDenReady.push(function() {
+        // This is where all the action happens:
+        ToneDen.player.create({
+            dom: "#player",
+            skin: "light",
+            tracksPerArtist: 6,
+            mini:true,
+            urls: [
+                "https://soundcloud.com/tzootz/sets/rafa-perez-quartet-standards"
+            ]
+        });
+    });
+</script>
 </html>

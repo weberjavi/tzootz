@@ -92,11 +92,6 @@ a{
 	ADELANTE CON LA METRALLA (⌐■_■)--︻╦╤─ - - - (╥﹏╥) 
 */
 body{
-	
-	width: 100%;
-	width: 100vw;
-	height: 100%;
-	height: 100vh;
 	font-family: 'Josefin Sans', sans-serif;
 }
 /******************************
@@ -104,9 +99,7 @@ body{
 *******************************/
 .portada{
 	width: 100%;
-	width: 100vw;
 	height: 100%;
-	height: 100vh;
 }
 .idiomas a{
     color: rgba(255,0,0,0.7);
@@ -373,8 +366,18 @@ SOUNDCLOUD PLAYER
 .controls i{
 	color:rgba(0,0,0,0.6);
 }
-
-
+/***********************
+     YOUTUBE PLAYER
+************************/
+#ytplayer{
+	width: 900px;
+	height: 506px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);	
+}
 
 
 

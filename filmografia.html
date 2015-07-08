@@ -24,8 +24,9 @@
 			<a href="index.html"><img src="img/logo_tzootz.svg"></a>
 		</div>
 		<div class="nav_secciones">
+			<a href="inicio.html" class="seccion label">Manifesto</a>
 			<a href="artistas.html" class="seccion label">Artistas</a>
-			<a href="filmografia.html" class="seccion pictures">Filmografía</a>
+			<a href="filmografia.html" class="seccion pictures seleccionada">Filmografía</a>
 			<a href="tienda.html" class="seccion ost">Tienda</a>
 			<!--a href="blog.html" class="seccion misc">Art/Misc</a-->
 			<a href="contacto.html" class="seccion contacto">Contacto</a>
@@ -39,10 +40,9 @@
 			</div>
 			<!--a href="#" class="seccion_meta shop">Social</a-->
 		</div>
-		
-
-<div id="player"></div>
-
+		<iframe id="ytplayer" type="text/html" width="640" height="390"
+  		src="http://www.youtube.com/embed?controls=1&modestbranding=1&theme=light&listType=playlist&list=PL0AOYgDlQV6ujIGNaywB28VUA4WAMY0FZ&v=2n8podEYKJM"
+  		frameborder="0" />
 	</div><!-- fin portada -->
 
 </body>
@@ -51,31 +51,5 @@
 <script type="text/javascript" src="js/velocity.ui.min.js"></script>
 <script src="https://connect.soundcloud.com/sdk-2.0.0.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script>
-    (function() {
-        var script = document.createElement("script");
 
-        script.type = "text/javascript";
-        script.async = true;
-        script.src = "http://sd.toneden.io/production/toneden.loader.js"
-
-        var entry = document.getElementsByTagName("script")[0];
-        entry.parentNode.insertBefore(script, entry);
-    }());
-
-    ToneDenReady = window.ToneDenReady || [];
-    ToneDenReady.push(function() {
-        // This is where all the action happens:
-        ToneDen.player.create({
-            dom: "#player",
-            eq: "waves",
-            skin: "light",
-            tracksPerArtist: 6,
-            mini:true,
-            urls: [
-                "https://soundcloud.com/tzootz/roty340children-of-the-ghetto-marcat?in=tzootz/sets/roty340tm"
-            ]
-        });
-    });
-</script>
 </html>

@@ -6,6 +6,8 @@ window.onload = function() {
   
     $m_titulo.velocity( 'transition.slideDownIn' );
     $m_texto.velocity( 'transition.slideUpIn' );
+
+  
   /*Código que activa o desactiva el sonido de la página de inicio al accionar el elemento*/
   var audio = $("#fidel")[0];
   var btn_audio = $("#musica");
@@ -24,7 +26,7 @@ window.onload = function() {
 
 
 
-
+ /*secuencia de animación de entrada de la página del FILMOGRAFÍA*/
   var visitaArtista = $(".visita_artista");
   var artista = $(".artista");
 
@@ -72,7 +74,56 @@ window.onload = function() {
 
 
 
+var map = L.map('map', {
+        center: [40.428547, -3.692240],
+        zoom: 11,
+        minZoom: 11,
+        maxZoom: 20,
+        attributionControl:false
+      });
+L.tileLayer.provider('Stamen.Toner').addTo(map);
 
+
+$(".boton_formulario").click(function() {
+  $("#map").removeClass( "mapactivo" );
+  $(".formulario").toggleClass( "formularioactivo" );
+});
+$(".boton_mapa").click(function() {
+  $(".formulario").removeClass( "formularioactivo" );
+  $("#map").toggleClass( "mapactivo" );
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(".boton_arriba").click(function() {
+  $("#cubo").removeClass( "abajo_visible" );
+  $("#cubo").addClass( "arriba_visible" );
+  $(".arriba").addClass( "opaco" );
+  $(".abajo").removeClass( "opaco" );
+});
+$(".boton_abajo").click(function() {
+  $("#cubo").removeClass( "arriba_visible" );
+  $("#cubo").addClass( "abajo_visible" );
+  $(".abajo").addClass( "opaco" );  
+  $(".arriba").removeClass( "opaco" );
+});
+$(".boton_frente").click(function() {
+  $("#cubo").removeClass( "arriba_visible" );
+  $("#cubo").removeClass( "abajo_visible" );
+  $("#cubo").addClass( "frente_visible" );
+  $(".abajo").addClass( "opaco" );  
+  $(".arriba").addClass( "opaco" );
+});
 
 
 

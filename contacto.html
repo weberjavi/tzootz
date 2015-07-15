@@ -12,6 +12,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,10 +27,10 @@
 		<div class="nav_secciones">
 			<a href="inicio.html" class="seccion label">Manifesto</a>
 			<a href="artistas.html" class="seccion label">Artistas</a>
-			<a href="filmografia.html" class="seccion pictures seleccionada">Filmografía</a>
+			<a href="filmografia.html" class="seccion pictures">Filmografía</a>
 			<a href="tienda.html" class="seccion ost">Tienda</a>
 			<!--a href="blog.html" class="seccion misc">Art/Misc</a-->
-			<a href="contacto_cubo.html" class="seccion contacto">Contacto</a>
+			<a href="contacto.html" class="seccion contacto seleccionada">Contacto</a>
 		</div>
 		<div class="nav_footer">
 			<!--a href="#" class="seccion_meta btn_manifesto">Créditos</a-->
@@ -40,12 +41,19 @@
 			</div>
 			<!--a href="#" class="seccion_meta shop">Social</a-->
 		</div>
-		<iframe id="ytplayer" type="text/html" width="640" height="390"
-  		src="http://www.youtube.com/embed?controls=1&modestbranding=1&listType=playlist&list=PL0AOYgDlQV6ujIGNaywB28VUA4WAMY0FZ&v=2n8podEYKJM"
-  		frameborder="0" />
+		<div class="contenedor_contacto">
+			<p>Puedes contactar con Tzootz a través del correo <span class="boton_formulario">hola@tzootz.com</span> o en el número de teléfono 666666666</p>
+			<p>Para visitas personales estamos en <span class="boton_mapa">Madrid</span></p>
+			<div id="map"></div>
+			<div class="formulario">Puedes contactar con Tzootz a través del correo</div>
+		</div>
 	</div><!-- fin portada -->
 
 </body>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/velocity.min.js"></script>
+<script type="text/javascript" src="js/velocity.ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script type="text/javascript" src="js/leaflet-providers.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </html>

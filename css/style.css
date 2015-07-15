@@ -373,11 +373,145 @@ SOUNDCLOUD PLAYER
 	width: 900px;
 	height: 506px;
 	position: absolute;
+	top: 20%;
+	left: calc(50% - 450px);
+	/*-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);	*/
+}
+/***********************
+     MAPA CONTACTO
+************************/
+/*.contenedor_contacto{
+	font-size: 22px;
+	text-transform: uppercase;
+	text-align: justify;
+	width: 400px;
+	height: 506px;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);	
+	transform:translate(-50%, -50%);
+}*/
+.contenedor_contacto span{
+	font-family: 'Rokkitt', serif;
+	color: red;
+	cursor: pointer;
+	vertical-align:2px; 
 }
+.formulario,
+#map { 
+	width: 500px;
+	height: 300px;
+	position: absolute;
+}	
+.leaflet-bar {
+  box-shadow: none; 
+  border-radius: none; 
+}
+.formularioactivo{
+	-webkit-transform: none !important;
+	transform:none !important;
+	opacity: 1 !important;
+}
+/***********************
+     CONTACTO CUBO
+************************/
+.contenedor_cubo{
+	width: 500px;
+	height: 300px;
+	position: relative;
+	top: 50vh;
+	left: 50%;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	perspective:1000px;
+}
+#cubo{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transition: transform 1s;
+	-webkit-transform: translateZ(-100px);
+	-webkit-transform-style: preserve-3d;
+	transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+	transform: translateZ(-100px);
+	transform-style: preserve-3d;
+}
+#cubo div{
+	width:  500px;
+	height:  300px;
+	display: block;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+#cubo .frente{ 
+	font-size: 30px;
+	text-align: justify;
+	-webkit-transform: rotateX(  0deg ) translateZ( 100px );
+	transform: rotateX(  0deg ) translateZ( 100px ); 
+}
+.arriba{ 
+	transition: transform .2s;
+	-webkit-transform: rotateX(  90deg ) translateZ( 100px );
+	transform: rotateX(  90deg ) translateZ( 100px ); 
+}
+.abajo{ 
+	transition: transform .2s;
+	-webkit-transform: rotateX( -90deg ) translateZ( 100px ); 
+	transform: rotateX( -90deg ) translateZ( 100px ); 
+}
+.frente_visible{ 
+	-webkit-transform: translateZ( -100px ) rotateY(    0deg ); 
+	transform: translateZ( -100px ) rotateY(    0deg ); 
+}
+.arriba_visible{ 
+	-webkit-transform: translateZ( -100px ) rotateX(  -90deg )!important; 
+	transform: translateZ( -100px ) rotateX(  -90deg ) !important; 
+}
+ .abajo_visible{ 
+	-webkit-transform: translateZ( -100px ) rotateX(   90deg )!important; 
+	transform: translateZ( -100px ) rotateX(   90deg )!important; 
+}
+.opaco{
+	opacity:1;
+}
+
+.boton_frente{
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+  right: 10px;
+  top: 30px;
+  color: red;
+}
+.boton_abajo,
+.boton_arriba{
+	font-family: 'Rokkitt', serif;
+	color: red;
+	text-transform: uppercase;
+	cursor: pointer;
+	vertical-align:2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

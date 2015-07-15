@@ -147,8 +147,8 @@ body{
 .idiomas{
 	opacity: 0;
 	position: absolute;
-	left: 48%;
-	bottom: -200px;
+	left: 47%;
+	bottom: -40px;
 	animation: idiomas 2s 2s linear forwards;
 }
 @keyframes idiomas {

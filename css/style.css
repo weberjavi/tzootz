@@ -156,6 +156,15 @@ body{
     opacity: 1;
   }
 }
+#demo-canvas{
+	opacity: 1;
+	animation: canvas-opacity 2s 2s linear forwards;
+}
+@keyframes canvas-opacity {
+  to {
+    opacity: .3;
+  }
+}
 /*****************************
 		HOME
 *****************************/
@@ -463,10 +472,8 @@ SOUNDCLOUD PLAYER
 	width: 500px;
 	height: 300px;
 	position: relative;
-	top: 50vh;
-	left: 50%;
-	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
+	top: 30vh;
+	left: calc(50% - 250px);
 	perspective:1000px;
 }
 #cubo{

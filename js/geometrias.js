@@ -68,8 +68,8 @@
         }
     }
 
-    // Event handling
-    function addListeners() {
+    // Event handling EL CÓDIGO COMENTADO ACTIVA LA INTERACCIÓN CON EL RATÓN
+    /*function addListeners() {
         if(!('ontouchstart' in window)) {
             window.addEventListener('mousemove', mouseMove);
         }
@@ -89,7 +89,7 @@
         }
         target.x = posx;
         target.y = posy;
-    }
+    }*/
 
     function scrollCheck() {
         if(document.body.scrollTop > height) animateHeader = false;

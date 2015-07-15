@@ -8,6 +8,9 @@ window.onload = function() {
     $m_texto.velocity( 'transition.slideUpIn' );
 
   
+
+
+  $(".contenedor_cubo").velocity( 'transition.slideUpIn' );
   /*Código que activa o desactiva el sonido de la página de inicio al accionar el elemento*/
   var audio = $("#fidel")[0];
   var btn_audio = $("#musica");

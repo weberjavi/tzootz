@@ -145,9 +145,16 @@ body{
     color: rgba(0,0,0,0.7);
 }
 .idiomas{
-	position: relative;
-	left: 50%;
-	margin-top: 20px;
+	opacity: 0;
+	position: absolute;
+	left: 48%;
+	bottom: -200px;
+	animation: idiomas 2s 2s linear forwards;
+}
+@keyframes idiomas {
+  to {
+    opacity: 1;
+  }
 }
 /*****************************
 		HOME

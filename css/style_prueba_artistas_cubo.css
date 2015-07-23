@@ -508,11 +508,11 @@ SOUNDCLOUD PLAYER
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	-webkit-transition: transform 1s;
+	-webkit-transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
 	-webkit-transform: translateZ(-250px);
 	-webkit-transform-style: preserve-3d;
 	transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
-	transform: translateZ(-100px);
+	transform: translateZ(-250px);
 	transform-style: preserve-3d;
 }
 #cubo .lado{
@@ -532,10 +532,12 @@ SOUNDCLOUD PLAYER
 	font-size: 1rem;
 	font-family: 'Source Code Pro', monospace ;
 	font-weight: 300;
-	line-height: 170%;
+	line-height: 150%;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 .tzootz_artistas{ 
-	padding: 10px 10px;
+	padding: 10px;
 	font-weight: 300;
 	text-transform: uppercase;
 	font-size: 1.4rem;

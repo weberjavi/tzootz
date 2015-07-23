@@ -8,9 +8,6 @@ window.onload = function() {
     $m_texto.velocity( 'transition.slideUpIn' );
 
   
-
-
-  $(".contenedor_cubo").velocity( 'transition.slideUpIn' );
   /*Código que activa o desactiva el sonido de la página de inicio al accionar el elemento*/
   var audio = $("#fidel")[0];
   var btn_audio = $("#musica");
@@ -24,9 +21,11 @@ window.onload = function() {
   });
 
   
-
-
-
+$(".nombre_artista_cubo").mouseenter(function() {
+    $(this).css("padding-left", "20px");
+}).mouseleave(function() {
+     $(this).css("padding-left", "40px");
+});
 
 
  /*secuencia de animación de entrada de la página del FILMOGRAFÍA*/
@@ -77,24 +76,16 @@ window.onload = function() {
 
 
 
-var map = L.map('map', {
-        center: [40.428547, -3.692240],
-        zoom: 11,
-        minZoom: 11,
-        maxZoom: 20,
-        attributionControl:false
-      });
-L.tileLayer.provider('Stamen.Toner').addTo(map);
 
 
-$(".boton_formulario").click(function() {
+/*$(".boton_formulario").click(function() {
   $("#map").removeClass( "mapactivo" );
   $(".formulario").toggleClass( "formularioactivo" );
 });
 $(".boton_mapa").click(function() {
   $(".formulario").removeClass( "formularioactivo" );
   $("#map").toggleClass( "mapactivo" );
-});
+});*/
 
 
 
@@ -129,6 +120,14 @@ $(".boton_frente").click(function() {
 });
 
 
+var map = L.map('map', {
+        center: [40.428547, -3.692240],
+        zoom: 11,
+        minZoom: 11,
+        maxZoom: 20,
+        attributionControl:false
+      });
+L.tileLayer.provider('Stamen.Toner').addTo(map);
 
 
 

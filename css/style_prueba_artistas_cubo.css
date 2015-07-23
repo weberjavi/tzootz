@@ -333,9 +333,12 @@ body{
 	display: inline-block;
 	font-family: 'Josefin Sans', sans-serif;
 	color: red;
-	font-size: 2.4em;
-	font-weight: 600;
-	line-height: 1.7em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	font-size: 1.9rem;
+	font-weight: 300;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	width: 100%;
 }
 .lineas{
 	font-weight: 300;
@@ -401,7 +404,7 @@ SOUNDCLOUD PLAYER
 .start-time,
 .stop-time,
 .mini-connect,
-.mini-info,
+/*.mini-info,*/
 .mini-social{
 	display: none !important;
 }
@@ -416,6 +419,31 @@ SOUNDCLOUD PLAYER
 }
 .controls i{
 	color:rgba(0,0,0,0.6);
+}
+.td.tdrow.player.light.mini {
+    background: none !important;
+}
+.tdlarge-12.tdsmall-12.columns.artist-name{
+	display: none;
+}
+.td.player.mini {
+	font-size: 20px;
+}
+#player_roty{
+	position: absolute;
+	   top: -18px;
+	left: 130px;
+    width: 350px;
+}
+.td.player.mini .mini-info{
+	border-left: none !important;
+}
+.td.player.light .info a, .td.player.light .mini-song-info a {
+    color:rgba(0,0,0,0.6) !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+.tdlarge-12.tdsmall-12.columns.song-name{
+    margin-top: 3px !important;
 }
 /***********************
      YOUTUBE PLAYER
@@ -452,9 +480,9 @@ SOUNDCLOUD PLAYER
 }
 .formulario,
 #map { 
-	width: 500px;
-	height: 300px;
-	position: absolute;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }	
 .leaflet-bar {
   box-shadow: none; 
@@ -469,12 +497,11 @@ SOUNDCLOUD PLAYER
      CONTACTO CUBO
 ************************/
 .contenedor_cubo{
-	width: 500px;
-	height: 300px;
+	width: 700px;
+	height: 500px;
 	position: relative;
-	top: 30vh;
-	left: calc(50% - 250px);
-	opacity: 0;
+	margin: 150px auto 0;
+	-webkit-perspective:1000px;
 	perspective:1000px;
 }
 #cubo{
@@ -482,49 +509,68 @@ SOUNDCLOUD PLAYER
 	height: 100%;
 	position: absolute;
 	-webkit-transition: transform 1s;
-	-webkit-transform: translateZ(-100px);
+	-webkit-transform: translateZ(-250px);
 	-webkit-transform-style: preserve-3d;
 	transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
 	transform: translateZ(-100px);
 	transform-style: preserve-3d;
 }
-#cubo div{
-	width:  500px;
-	height:  300px;
+#cubo .lado{
+	width:  695px ;
+	height:  495px;
 	display: block;
 	position: absolute;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 #cubo .frente{ 
-	font-size: 30px;
 	text-align: justify;
-	-webkit-transform: rotateX(  0deg ) translateZ( 100px );
-	transform: rotateX(  0deg ) translateZ( 100px ); 
+	-webkit-transform: rotateX( 0deg ) translateZ( 250px )!important;
+	transform: rotateX( 0deg ) translateZ( 250px )!important; 
+}
+#cubo p{
+	font-size: 1rem;
+	font-family: 'Source Code Pro', monospace ;
+	font-weight: 300;
+	line-height: 170%;
+}
+.tzootz_artistas{ 
+	padding: 10px 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	border: 1px solid red;
+	display: inline-block;
+	height: 2.3rem;
+	margin-bottom: 15px;
+}
+.frente p{ 
 }
 .arriba{ 
 	opacity: 0;
+	-webkit-transition: all .2s;
 	transition: all .2s;
-	-webkit-transform: rotateX(  90deg ) translateZ( 100px );
-	transform: rotateX(  90deg ) translateZ( 100px ); 
+	-webkit-transform: rotateX( -90deg ) translateZ( 250px ); 
+	transform: rotateX( -90deg ) translateZ( 250px ); 
 }
 .abajo{ 
 	opacity: 0;
+	-webkit-transition: all .2s;
 	transition: all .2s;
-	-webkit-transform: rotateX( -90deg ) translateZ( 100px ); 
-	transform: rotateX( -90deg ) translateZ( 100px ); 
+	-webkit-transform: rotateX( -90deg ) translateZ( 250px ); 
+	transform: rotateX( -90deg ) translateZ( 250px ); 
 }
 .frente_visible{ 
-	-webkit-transform: translateZ( -100px ) rotateY(    0deg ); 
-	transform: translateZ( -100px ) rotateY(    0deg ); 
+	-webkit-transform: translateZ( -250px ) rotateY(    0deg )!important; 
+	transform: translateZ( -250px ) rotateY(    0deg )!important; 
 }
 .arriba_visible{ 
-	-webkit-transform: translateZ( -100px ) rotateX(  -90deg )!important; 
-	transform: translateZ( -100px ) rotateX(  -90deg ) !important; 
+	-webkit-transform: translateZ( -250px ) rotateX(  90deg )!important; 
+	transform: translateZ( -250px ) rotateX(  90deg ) !important; 
 }
  .abajo_visible{ 
-	-webkit-transform: translateZ( -100px ) rotateX(   90deg )!important; 
-	transform: translateZ( -100px ) rotateX(   90deg )!important; 
+	-webkit-transform: translateZ( -250px ) rotateX(   90deg )!important; 
+	transform: translateZ( -250px ) rotateX(   90deg )!important; 
 }
 .opaco{
 	opacity:1;
@@ -536,22 +582,41 @@ SOUNDCLOUD PLAYER
 	height: 15px;
 	position: absolute;
   right: 10px;
-  top: 30px;
+      top: 6px;
+    font-size: 20px;
   color: red;
 }
 .boton_abajo,
 .boton_arriba{
-	font-family: 'Rokkitt', serif;
-	color: red;
-	text-transform: uppercase;
-	cursor: pointer;
-	vertical-align:2px;
+	
 }
-
-
-
-
-
+.grupos{
+	margin-top: 10px;
+}
+.grupo{
+	position: relative;
+}
+.nombre_artista_cubo{
+	padding-left: 40px;
+	padding-top: 15px;
+	margin-left: 140px;
+	color: red;
+	/*text-transform: uppercase;*/
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	font-size: 1.7rem;
+	font-weight: 300;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+/*.nombre_artista_cubo:before{
+	position: absolute;
+	top: 10px; 
+    content: url("../img/punto.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}*/
 
 
 

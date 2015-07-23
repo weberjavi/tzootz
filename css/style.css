@@ -231,6 +231,20 @@ body{
 .seccion:hover{
 	color: black;
 }
+.seccion:before{
+	border-bottom: 1px solid red;
+	content: "";
+	position: absolute;
+	opacity:1;
+	-webkit-transition: all 0.3s;
+}
+/*.seccion:before{
+	border-bottom: 1px solid red;
+	content: "";
+	position: absolute;
+	opacity:0;
+	-webkit-transition: all 0.3s;
+}*/
 .seleccionada{
 	font-weight: 600;
 	color: black;

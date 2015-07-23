@@ -204,6 +204,7 @@ body{
 .seccion:hover{
 	color: black;
 }
+
 .seleccionada{
 	font-weight: 600;
 	color: black;
@@ -333,7 +334,7 @@ body{
 	display: inline-block;
 	font-family: 'Josefin Sans', sans-serif;
 	color: red;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	font-size: 1.9rem;
 	font-weight: 300;
 	-webkit-transition: all .2s;
@@ -418,7 +419,7 @@ SOUNDCLOUD PLAYER
   border:none;
 }
 .controls i{
-	color:rgba(0,0,0,0.6);
+	color:rgba(0,0,0,0.2);
 }
 .td.tdrow.player.light.mini {
     background: none !important;
@@ -439,7 +440,7 @@ SOUNDCLOUD PLAYER
 	border-left: none !important;
 }
 .td.player.light .info a, .td.player.light .mini-song-info a {
-    color:rgba(0,0,0,0.6) !important;
+    color:rgba(0,0,0,0.3) !important;
     font-family: 'Josefin Sans', sans-serif !important;
 }
 .tdlarge-12.tdsmall-12.columns.song-name{
@@ -545,6 +546,12 @@ SOUNDCLOUD PLAYER
 	display: inline-block;
 	height: 2.3rem;
 	margin-bottom: 15px;
+		display: none;
+
+}
+.grupo,
+.texto_artistas{
+	display: none;
 }
 .frente p{ 
 }
@@ -605,23 +612,32 @@ SOUNDCLOUD PLAYER
 	color: red;
 	/*text-transform: uppercase;*/
 	cursor: pointer;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	/*border-bottom: 1px solid rgba(0, 0, 0, 0.5);*/
 	font-size: 1.7rem;
 	font-weight: 300;
 	-webkit-transition: all .2s;
 	transition: all .2s;
 }
-/*.nombre_artista_cubo:before{
+.nombre_artista_cubo::after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 80%;
+    left: 140px;
+    -webkit-transition: all .2s;
+	transition: all .2s;
+}
+.nombre_artista_cubo:hover::after {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    bottom: 13px;
+}
+
+#vector{
+	width: 100px;
+	height: 20px;
 	position: absolute;
-	top: 10px; 
-    content: url("../img/punto.svg");
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-}*/
-
-
-
+}
 
 
 

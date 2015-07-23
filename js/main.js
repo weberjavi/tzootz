@@ -8,6 +8,15 @@ window.onload = function() {
     $m_texto.velocity( 'transition.slideUpIn' );
 
   
+  var $label_titulo = $(".tzootz_artistas"),
+      $label_texto = $(".texto_artistas");
+
+     $(".grupo").velocity("transition.slideLeftIn", { stagger: 90 });
+    $label_texto.velocity( 'transition.slideUpIn' );
+   
+    $label_titulo.velocity( 'transition.slideDownIn' , { display: "inline-block" });
+
+
   /*Código que activa o desactiva el sonido de la página de inicio al accionar el elemento*/
   var audio = $("#fidel")[0];
   var btn_audio = $("#musica");

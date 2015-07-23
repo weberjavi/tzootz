@@ -112,11 +112,21 @@ body{
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   fill-opacity:0;
+  -webkit-animation: dash 6s 1.3s ease-out forwards, opacity 2s 2s linear forwards;
   animation: dash 6s 1.3s ease-out forwards, opacity 2s 2s linear forwards;
   
   
 }
-
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes opacity {
+  to {
+    fill-opacity: 1;
+  }
+}
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
@@ -130,9 +140,14 @@ body{
 /**/
 #puntos{
 	opacity: .3;
+	-webkit-animation: puntos 5s forwards;
 	animation: puntos 5s forwards;
 }
-
+@-webkit-keyframes puntos {
+  to {
+    opacity: 1;
+  }
+}
 @keyframes puntos {
   to {
     opacity: 1;
@@ -149,7 +164,13 @@ body{
 	position: absolute;
 	left: 47%;
 	bottom: -40px;
+	-webkit-animation: idiomas 2s 2s linear forwards;
 	animation: idiomas 2s 2s linear forwards;
+}
+@-webkit-keyframes idiomas {
+  to {
+    opacity: 1;
+  }
 }
 @keyframes idiomas {
   to {
@@ -158,7 +179,13 @@ body{
 }
 #demo-canvas{
 	opacity: 1;
+	-webkit-animation: canvas-opacity 2s 2s linear forwards;
 	animation: canvas-opacity 2s 2s linear forwards;
+}
+@-webkit-keyframes canvas-opacity {
+  to {
+    opacity: .3;
+  }
 }
 @keyframes canvas-opacity {
   to {

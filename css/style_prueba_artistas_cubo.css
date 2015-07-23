@@ -197,17 +197,19 @@ body{
 }
 .seccion_meta,
 .seccion{
-	padding: 0px 10px;
 	color: rgba(140,140,140,1);
+	line-height: 30px;
+	-webkit-transition: all .2s;
+	transition: all .2s;
 }
 .seccion_meta:hover,
 .seccion:hover{
-	color: black;
+	color: rgba(255,0,0,.6);
 }
 
 .seleccionada{
-	font-weight: 600;
-	color: black;
+	font-weight: 400;
+	color: red;
 }
 .logo{
 	position: absolute;
@@ -638,6 +640,36 @@ SOUNDCLOUD PLAYER
 	height: 20px;
 	position: absolute;
 }
+
+.seccion::after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+position: relative;
+bottom: 7px;
+content: "";
+width: 100%;
+    opacity: .2;
+transition: all 0.2s ease 0s;
+display: block;
+}
+.seccion:hover::after {
+	border-bottom: 1px solid rgba(0, 0, 0, .8);
+    bottom: 15px;
+    opacity: 1;
+}
+
+.seccion{
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -94,6 +94,9 @@ a{
 body{
 	font-family: 'Josefin Sans', sans-serif;
 }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 10px; background-color:rgba(0,0,0,0.3);}
 /******************************
 		LANDING
 *******************************/

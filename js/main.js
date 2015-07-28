@@ -87,9 +87,6 @@ $(".nombre_artista_cubo").mouseenter(function() {
     tema_crackin.pause()
   });
 
-
-
-
 $(".boton_arriba").click(function() {
   $("#cubo").removeClass( "abajo_visible" );
   $("#cubo").addClass( "arriba_visible" );

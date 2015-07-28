@@ -83,7 +83,7 @@ video {
 @-ms-viewport { width: device-width; }
 @-o-viewport { width: device-width; }
 @viewport { width: device-width; }
-/**/
+
 a{
 	text-decoration: none;
 }	 
@@ -99,11 +99,18 @@ body{
 *******************************/
 .portada{
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 }
 #logo{
 	width: 250px;
 }
+.logo{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform:translate(-50%, -50%);
+		transform:translate(-50%, -50%);
+	}
 #letras{
 	opacity: 1;
 }
@@ -166,68 +173,66 @@ body{
   }
 }
 /*****************************
-		HOME
+		NAVEGACIÓN
 *****************************/
-.nav_secciones{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-weight: 300;
-}
-.nav_secciones_interior{
-	position: absolute;
-	top: 50px;
-	right: 20px;
-	font-weight: 300;
-}
-
-.nav_footer{
-	font-weight:300;
-	position: fixed;
-	bottom: 0px;
-	left: 50%;
-	-webkit-transform:translateX(-50%);
-	transform:translateX(-50%);
-}
-.seccion_meta{
-	vertical-align: super;
-}
-.iconos{
-	display: inline;
-}
-.seccion_meta,
-.seccion{
-	color: rgba(140,140,140,1);
-	line-height: 30px;
-	-webkit-transition: all .2s;
-	transition: all .2s;
-}
-.seccion_meta:hover,
-.seccion:hover{
-	color: rgba(255,0,0,.6);
-}
-
-.seleccionada{
-	font-weight: 400;
-	color: red;
-}
-.logo{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-}
-
-.logo_peque{
-	position: absolute;
-	top: 13px;
-	left: 13px;
-}
-.logo_peque img{
-	width: 80px;
-}
-
+	.nav_secciones{
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+	.nav_secciones a{
+		display:block;
+		position: relative;
+		padding: 5px 0;
+		color: rgba(140,140,140,1);
+	}
+	.nav_secciones a span::before{
+		content: "";
+	    position: absolute;
+	    left: -5px;
+	    width: calc(100% + 5px);
+	    bottom: 5px;
+	    border-bottom: 1px solid rgba(0,0,0,0.3);
+	    opacity: 0;
+	    -webkit-transition:all .2s;
+	    transition:all .2s;
+	}
+	.nav_secciones a span:hover::before{
+	    bottom: 12px;
+	    opacity: 1;
+	}
+	.seleccionada{
+		color: black !important;
+	}
+	.nav_secciones .seleccionada::before{
+		content: "";
+	    position: absolute;
+	    left: -5px;
+	    width: 100%;
+	    bottom: 12px;
+	    border-bottom: 1px solid rgba(255,0,0,0.3);
+	}
+	
+	
+	.nav_footer{
+		font-weight:300;
+		position: fixed;
+		bottom: 0px;
+		left: 50%;
+		-webkit-transform:translateX(-50%);
+		transform:translateX(-50%);
+	}
+	.iconos{
+		display: inline;
+	}
+	.logo_peque{
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+	.logo_peque img{
+		width: 100px;
+	}
 /*********************************
 			MANIFESTO
 **********************************/
@@ -266,131 +271,7 @@ body{
 	color: red;
 	cursor: pointer;
 }
-/*********************************
-			GRID ARTISTAS
-**********************************/
-.grid_artistas{
-	width: 980px;
-	height: auto;
-	margin: 0px auto;
-	padding-top: 150px;
-}
-.artista{
-	position: relative;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin: 10px; 
-	overflow: hidden;
-	-webkit-filter: grayscale(100%) brightness(105%) contrast(90%);
-	filter: grayscale(100%) brightness(105%) contrast(90%);
-}
 
-.artista:hover {
-	-webkit-filter: none;
-	filter: none;
-}
-.artista h3{
-	position: absolute;
-	display: none;
-	color: red;
-	bottom: 200px;
-	font-weight: 700;
-	font-size: 2em;
-	z-index: 200;
-	left: 50%;
-	-webkit-transform:translateX(-50%);
-	transform:translateX(-50%);
-}
-.artista a{
-	display: none;
-	position: absolute;
-	color: white;
-	bottom: 100px;
-	font-weight: 700;
-	font-size: 2em;
-	z-index: 200;
-	padding: 3px;
-	border: 2px solid white;
-	cursor: pointer;
-	left: 20% ;
-}
-/*********************************
-			PÁGINA ARTISTA
-**********************************/
-
-.contenedor_artista{
-	max-width: 980px;
-	margin: 0 auto;
-	padding: 150px 20px 0px 20px;
-}
-.artista_interior{
-	position: relative;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin: 10px; 
-	overflow: hidden;
-}
-.nombre_artista{
-	display: inline-block;
-	font-family: 'Josefin Sans', sans-serif;
-	color: red;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	font-size: 1.9rem;
-	font-weight: 300;
-	-webkit-transition: all .2s;
-	transition: all .2s;
-	width: 100%;
-}
-.lineas{
-	font-weight: 300;
-	color: black;
-}
-.texto_artista{
-	display: inline-block;
-	font-size: 1.2em;
-	padding: 10px;
-	font-weight: 300;
-	font-family:'Rokkitt', serif;
-}
-.souncloud_player{
-	margin-top: 10px !important;
-	float: right !important;
-}
-
-/**********************************************************
-	Clases para manejar los efectos del plugin tilt.js
-	http://tympanus.net/codrops/2015/05/28/image-tilt-effect/comment-page-1/#comments
-**********************************************************/
-.tilt {
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-}
-
-.tilt__back,
-.tilt__front {
-	width: 100%;
-	height: 100%;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.tilt__back {
-	position: relative;
-}
-
-.tilt__front {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
 /***********************
 SOUNDCLOUD PLAYER
 ************************/
@@ -460,6 +341,7 @@ SOUNDCLOUD PLAYER
 	/*-webkit-transform:translate(-50%, -50%);
 	transform:translate(-50%, -50%);	*/
 }
+
 /***********************
      MAPA CONTACTO
 ************************/
@@ -474,14 +356,13 @@ SOUNDCLOUD PLAYER
 	left: 50%;
 	-webkit-transform:translate(-50%, -50%);
 	transform:translate(-50%, -50%);
-}*/
+}
 .contenedor_contacto span{
 	font-family: 'Rokkitt', serif;
 	color: red;
 	cursor: pointer;
 	vertical-align:2px; 
 }
-.formulario,
 #map { 
 	width: 100%;
 	height: 100%;
@@ -495,7 +376,65 @@ SOUNDCLOUD PLAYER
 	-webkit-transform: none !important;
 	transform:none !important;
 	opacity: 1 !important;
+}*/
+
+
+
+.contacto{
+		position: relative;
+		width: 695px;
+		margin: 150px auto;
+		
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective:1000px;
+	perspective:1000px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	}
+.titulo_contacto{
+		text-transform: uppercase;
+		display: none;
+		font-size: 1.4rem;
+		font-weight: 300;
+		border:1px solid red;
+		padding: 10px;
+		height: 2.3rem;
+		margin-bottom: 25px;
+	}
+	.texto_contacto{
+		display: none;
+		font-family: 'Source Code Pro', monospace ;
+		/*text-align: justify;*/
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 150%;
+		margin-bottom: 25px;
+	}
+	.boton_mapa{
+		color: red;
+		cursor: pointer;
+	}
+	#map { 
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
+#contenedor_mapa{
+	width: 695px;
+	height: 391px;
+	opacity: 0;
+	transition: all .2s;
+	-webkit-transform: rotateX( -90deg ); 
+	transform: rotateX( -90deg ); 
+	-webkit-transform-origin:top;
+	transform-origin:top;
+}
+	.mapa_visible{
+		opacity: 1 !important;
+		-webkit-transform: rotateX( 0deg ) !important; 
+		transform: rotateX( 0deg ) !important; 
+	}
 /***********************
      CONTACTO CUBO
 ************************/
@@ -607,6 +546,17 @@ SOUNDCLOUD PLAYER
 .grupo{
 	position: relative;
 }
+
+.nombre_artista{
+	color: red;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	font-size: 1.7rem;
+	font-weight: 300;
+}
+.artista_interior {
+    float: left;
+    padding: 15px;
+}
 .nombre_artista_cubo{
 	padding-left: 40px;
 	padding-top: 15px;
@@ -641,26 +591,13 @@ SOUNDCLOUD PLAYER
 	position: absolute;
 }
 
-.seccion::after {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-position: relative;
-bottom: 7px;
-content: "";
-width: 100%;
-    opacity: .2;
-transition: all 0.2s ease 0s;
-display: block;
-}
-.seccion:hover::after {
-	border-bottom: 1px solid rgba(0, 0, 0, .8);
-    bottom: 15px;
-    opacity: 1;
-}
-
-.seccion{
-	position: relative;
-}
-
+.logo_artistas{
+	display: none;
+		height: 40px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 
 
 

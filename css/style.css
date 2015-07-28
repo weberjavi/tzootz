@@ -97,385 +97,317 @@ body{
 /******************************
 		LANDING
 *******************************/
-.portada{
-	width: 100%;
-	height: 100%;
-}
-#logo{
-	width: 250px;
-}
-#letras{
-	opacity: 1;
-}
-/**/
-#letras .path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  fill-opacity:0;
-  -webkit-animation: dash 6s 1.3s ease-out forwards, opacity 2s 2s linear forwards;
-  animation: dash 6s 1.3s ease-out forwards, opacity 2s 2s linear forwards;
-  
-  
-}
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes opacity {
-  to {
-    fill-opacity: 1;
-  }
-}
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes opacity {
-  to {
-    fill-opacity: 1;
-  }
-}
-/**/
-#puntos{
-	opacity: .3;
-	-webkit-animation: puntos 5s forwards;
-	animation: puntos 5s forwards;
-}
-@-webkit-keyframes puntos {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes puntos {
-  to {
-    opacity: 1;
-  }
-}
-.idiomas a{
-    color: rgba(255,0,0,0.7);
-}
-.idiomas a:hover{
-    color: rgba(0,0,0,0.7);
-}
-.idiomas{
-	opacity: 0;
-	position: absolute;
-	left: 47%;
-	bottom: -40px;
-	-webkit-animation: idiomas 2s 2s linear forwards;
-	animation: idiomas 2s 2s linear forwards;
-}
-@-webkit-keyframes idiomas {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes idiomas {
-  to {
-    opacity: 1;
-  }
-}
-#demo-canvas{
-	opacity: 1;
-	-webkit-animation: canvas-opacity 2s 2s linear forwards;
-	animation: canvas-opacity 2s 2s linear forwards;
-}
-@-webkit-keyframes canvas-opacity {
-  to {
-    opacity: .3;
-  }
-}
-@keyframes canvas-opacity {
-  to {
-    opacity: .3;
-  }
-}
+	.portada{
+		width: 100%;
+		height: 100%;
+	}
+	#logo{
+		width: 250px;
+	}
+	#letras{
+		opacity: 1;
+	}
+	/**/
+	#letras .path {
+	  stroke-dasharray: 1000;
+	  stroke-dashoffset: 1000;
+	  fill-opacity:0;
+	  -webkit-animation: dash 6s 1.3s ease-out forwards, opacity 2s 2s linear forwards;
+	  animation: dash 6s 1.3s ease-out forwards, opacity 2s 2s linear forwards;
+	  
+	  
+	}
+	@-webkit-keyframes dash {
+	  to {
+	    stroke-dashoffset: 0;
+	  }
+	}
+	@-webkit-keyframes opacity {
+	  to {
+	    fill-opacity: 1;
+	  }
+	}
+	@keyframes dash {
+	  to {
+	    stroke-dashoffset: 0;
+	  }
+	}
+	@keyframes opacity {
+	  to {
+	    fill-opacity: 1;
+	  }
+	}
+	/**/
+	#puntos{
+		opacity: .3;
+		-webkit-animation: puntos 5s forwards;
+		animation: puntos 5s forwards;
+	}
+	@-webkit-keyframes puntos {
+	  to {
+	    opacity: 1;
+	  }
+	}
+	@keyframes puntos {
+	  to {
+	    opacity: 1;
+	  }
+	}
+	.idiomas a{
+	    color: rgba(255,0,0,0.7);
+	}
+	.idiomas a:hover{
+	    color: rgba(0,0,0,0.7);
+	}
+	.idiomas{
+		opacity: 0;
+		position: absolute;
+		left: 47%;
+		bottom: -40px;
+		-webkit-animation: idiomas 2s 2s linear forwards;
+		animation: idiomas 2s 2s linear forwards;
+	}
+	@-webkit-keyframes idiomas {
+	  to {
+	    opacity: 1;
+	  }
+	}
+	@keyframes idiomas {
+	  to {
+	    opacity: 1;
+	  }
+	}
+	#demo-canvas{
+		opacity: 1;
+		-webkit-animation: canvas-opacity 2s 2s linear forwards;
+		animation: canvas-opacity 2s 2s linear forwards;
+	}
+	@-webkit-keyframes canvas-opacity {
+	  to {
+	    opacity: .3;
+	  }
+	}
+	@keyframes canvas-opacity {
+	  to {
+	    opacity: .3;
+	  }
+	}
 /*****************************
-		HOME
+		NAVEGACIÓN
 *****************************/
-.nav_secciones{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-weight: 300;
-}
-.nav_secciones_interior{
-	position: absolute;
-	top: 50px;
-	right: 20px;
-	font-weight: 300;
-}
+	.nav_secciones{
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+	.nav_secciones a{
+		display:block;
+		position: relative;
+		padding: 5px 0;
+		color: rgba(140,140,140,1);
+	}
+	.nav_secciones a span::before{
+		content: "";
+	    position: absolute;
+	    left: -5px;
+	    width: calc(100% + 5px);
+	    bottom: 5px;
+	    border-bottom: 1px solid rgba(0,0,0,0.3);
+	    opacity: 0;
+	    -webkit-transition:all .2s;
+	    transition:all .2s;
+	}
+	.nav_secciones a span:hover::before{
+	    bottom: 12px;
+	    opacity: 1;
+	}
+	.seleccionada{
+		color: black !important;
+	}
+	.nav_secciones .seleccionada::before{
+		content: "";
+	    position: absolute;
+	    left: -5px;
+	    width: 100%;
+	    bottom: 12px;
+	    border-bottom: 1px solid rgba(255,0,0,0.3);
+	}
+	
+	
+	.nav_footer{
+		font-weight:300;
+		position: fixed;
+		bottom: 0px;
+		left: 50%;
+		-webkit-transform:translateX(-50%);
+		transform:translateX(-50%);
+	}
+	.iconos{
+		display: inline;
+	}
+	.logo{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform:translate(-50%, -50%);
+		transform:translate(-50%, -50%);
+	}
 
-.nav_footer{
-	font-weight:300;
-	position: fixed;
-	bottom: 0px;
-	left: 50%;
-	-webkit-transform:translateX(-50%);
-	transform:translateX(-50%);
-}
-.seccion_meta{
-	vertical-align: super;
-}
-.iconos{
-	display: inline;
-}
-.seccion_meta,
-.seccion{
-	padding: 0px 10px;
-	color: rgba(140,140,140,1);
-}
-.seccion_meta:hover,
-.seccion:hover{
-	color: black;
-}
-.seccion:before{
-	border-bottom: 1px solid red;
-	content: "";
-	position: absolute;
-	opacity:1;
-	-webkit-transition: all 0.3s;
-}
-/*.seccion:before{
-	border-bottom: 1px solid red;
-	content: "";
-	position: absolute;
-	opacity:0;
-	-webkit-transition: all 0.3s;
-}*/
-.seleccionada{
-	font-weight: 600;
-	color: black;
-}
-.logo{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-}
-
-.logo_peque{
-	position: absolute;
-	top: 13px;
-	left: 13px;
-}
-.logo_peque img{
-	width: 80px;
-}
-
+	.logo_peque{
+		position: absolute;
+		top: 13px;
+		left: 13px;
+	}
+	.logo_peque img{
+		width: 80px;
+	}
 /*********************************
-			MANIFESTO
+		MANIFESTO
 **********************************/
-.manifesto{
-	position: relative;
-	width: 695px;
-	margin: 150px auto;
-}
-.titulo_manifesto{
-	display: none;
-	text-transform: uppercase;
-	position: absolute;
-	font-size: 1.4rem;
-	font-weight: 300;
-	border:1px solid red;
-	padding: 10px;
-	height: 2.3rem;
-	margin-bottom: 15px;
-}
-.texto_manifesto{
-	font-family: 'Source Code Pro', monospace ;
-	display: none;
-	text-align: justify;
-	position: absolute;
-	top: 50px;
-	left: calc(50% - 345px);
-	font-size: 1rem;
-	font-weight: 300;
-	line-height: 150%;
-	width: 695px;
-}
-.cerrar_manifesto{
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	color: red;
-}
-#musica{
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	color: red;
-	cursor: pointer;
-}
-/*********************************
-			GRID ARTISTAS
-**********************************/
-.grid_artistas{
-	width: 980px;
-	height: auto;
-	margin: 0px auto;
-	padding-top: 150px;
-}
-.artista{
-	position: relative;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin: 10px; 
-	overflow: hidden;
-	-webkit-filter: grayscale(100%) brightness(105%) contrast(90%);
-	filter: grayscale(100%) brightness(105%) contrast(90%);
-}
+	.manifesto{
+		position: relative;
+		width: 695px;
+		margin: 150px auto;
+	}
+	.titulo_manifesto{
+		display: none;
+		text-transform: uppercase;
+		position: absolute;
+		font-size: 1.4rem;
+		font-weight: 300;
+		border:1px solid red;
+		padding: 10px;
+		height: 2.3rem;
+		margin-bottom: 15px;
+	}
+	.texto_manifesto{
+		font-family: 'Source Code Pro', monospace ;
+		display: none;
+		text-align: justify;
+		position: absolute;
+		top: 50px;
+		left: calc(50% - 345px);
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 150%;
+		width: 695px;
+	}
+	.texto_manifesto a{
+		color: red;
+	}
+	.cerrar_manifesto{
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		color: red;
+	}
+	#musica{
+		display: none;
+		text-transform: uppercase;
+		position: absolute;
+		right: 15px;
+		color: rgba(0,0,0,0.6);
+		cursor: pointer;
+		font-size: 0.8rem;
 
-.artista:hover {
-	-webkit-filter: none;
-	filter: none;
-}
-.artista h3{
-	position: absolute;
-	display: none;
-	color: red;
-	bottom: 200px;
-	font-weight: 700;
-	font-size: 2em;
-	z-index: 200;
-	left: 50%;
-	-webkit-transform:translateX(-50%);
-	transform:translateX(-50%);
-}
-.artista a{
-	display: none;
-	position: absolute;
-	color: white;
-	bottom: 100px;
-	font-weight: 700;
-	font-size: 2em;
-	z-index: 200;
-	padding: 3px;
-	border: 2px solid white;
-	cursor: pointer;
-	left: 20% ;
-}
-/*********************************
-			PÁGINA ARTISTA
-**********************************/
-
-.contenedor_artista{
-	max-width: 980px;
-	margin: 0 auto;
-	padding: 150px 20px 0px 20px;
-}
-.artista_interior{
-	position: relative;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin: 10px; 
-	overflow: hidden;
-}
-.nombre_artista{
-	display: inline-block;
-	font-family: 'Josefin Sans', sans-serif;
-	color: red;
-	font-size: 2.4em;
-	font-weight: 600;
-	line-height: 1.7em;
-}
-.lineas{
-	font-weight: 300;
-	color: black;
-}
-.texto_artista{
-	display: inline-block;
-	font-size: 1.2em;
-	padding: 10px;
-	font-weight: 300;
-	font-family:'Rokkitt', serif;
-}
-.souncloud_player{
-	margin-top: 10px !important;
-	float: right !important;
-}
-
-/**********************************************************
-	Clases para manejar los efectos del plugin tilt.js
-	http://tympanus.net/codrops/2015/05/28/image-tilt-effect/comment-page-1/#comments
-**********************************************************/
-.tilt {
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-}
-
-.tilt__back,
-.tilt__front {
-	width: 100%;
-	height: 100%;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.tilt__back {
-	position: relative;
-}
-
-.tilt__front {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
+	}
+	.sonando{
+		color:red !important;
+	    -webkit-transition:all .2s;
+	    transition:all .2s;
+	}
 /***********************
-SOUNDCLOUD PLAYER
+		SOUNDCLOUD PLAYER
 ************************/
-#player{
-	display: inline-block;
-  position: relative;
-  width: 100px;
-  z-index: 500;
-  height: 60px;
-  padding-top: 18px;
-  margin-left: 15px;
-}
-.mini-scrubber,
-.start-time,
-.stop-time,
-.mini-connect,
-.mini-info,
-.mini-social{
-	display: none !important;
-}
- .slider{
-	position: absolute;
-	height: 20px;
-	color: red;
-	top:10px;
-}
-.td.player.light {
-  border:none;
-}
-.controls i{
-	color:rgba(0,0,0,0.6);
-}
+	#player{
+		display: inline-block;
+	  position: relative;
+	  width: 100px;
+	  z-index: 500;
+	  height: 60px;
+	  padding-top: 18px;
+	  margin-left: 15px;
+	}
+	.mini-scrubber,
+	.start-time,
+	.stop-time,
+	.mini-connect,
+	.mini-info,
+	.mini-social{
+		display: none !important;
+	}
+	 .slider{
+		position: absolute;
+		height: 20px;
+		color: red;
+		top:10px;
+	}
+	.td.player.light {
+	  border:none;
+	}
+	.controls i{
+		color:rgba(0,0,0,0.6);
+	}
 /***********************
      YOUTUBE PLAYER
 ************************/
+
 #ytplayer{
-	width: 900px;
-	height: 506px;
-	position: absolute;
-	top: 20%;
-	left: calc(50% - 450px);
-	/*-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);	*/
+	width: 695px;
+	height: 391px;
+	background-color: black;
+	opacity: 0;
+	transition: all .2s;
+	-webkit-transform: rotateX( -90deg ); 
+	transform: rotateX( -90deg ); 
+	-webkit-transform-origin:top;
+	transform-origin:top;
 }
+.filmografia{
+		position: relative;
+		width: 695px;
+		margin: 150px auto;
+		
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective:1000px;
+	perspective:1000px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	}
+.titulo_filmografia{
+		text-transform: uppercase;
+		display: inline-block;
+		font-size: 1.4rem;
+		font-weight: 300;
+		border:1px solid red;
+		padding: 10px;
+		height: 2.3rem;
+		margin-bottom: 25px;
+	}
+	.logo_filmografia{
+		height: 40px;
+		position: absolute;
+		right: 0;
+	}
+	.texto_filmografia{
+		font-family: 'Source Code Pro', monospace ;
+		/*text-align: justify;*/
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 150%;
+		margin-bottom: 25px;
+	}
+	.boton_ytplayer{
+		color: red;
+		cursor: pointer;
+	}
+
+	.ytplayer_visible{
+		opacity: 1 !important;
+		-webkit-transform: rotateX( 0deg ) !important; 
+		transform: rotateX( 0deg ) !important; 
+	}
 /***********************
      MAPA CONTACTO
 ************************/
@@ -521,7 +453,6 @@ SOUNDCLOUD PLAYER
 	position: relative;
 	top: 30vh;
 	left: calc(50% - 250px);
-	opacity: 0;
 	perspective:1000px;
 }
 #cubo{

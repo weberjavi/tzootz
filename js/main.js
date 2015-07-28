@@ -1,21 +1,27 @@
 window.onload = function() {
 
-	/*secuencia de animación de entrada de la página del MANIFESTO*/
+	/*secuencia de animación de entrada de las distintas páginas*/
+
+  //MANIFESTO
 	var $m_titulo = $(".titulo_manifesto"),
     	$m_texto = $(".texto_manifesto");
   
     $m_titulo.velocity( 'transition.slideDownIn' );
     $m_texto.velocity( 'transition.slideUpIn' );
+    $("#musica").velocity( 'transition.slideUpIn' );
 
-  
+  //RECORD LABEL
   var $label_titulo = $(".tzootz_artistas"),
       $label_texto = $(".texto_artistas");
 
-     $(".grupo").velocity("transition.slideLeftIn", { stagger: 90 });
-    $label_texto.velocity( 'transition.slideUpIn' );
-   
-    $label_titulo.velocity( 'transition.slideDownIn' , { display: "inline-block" });
+  $(".grupo").velocity("transition.slideLeftIn", { stagger: 90 });
+  $label_texto.velocity( 'transition.slideUpIn' );
+  $label_titulo.velocity( 'transition.slideDownIn' , { display: "inline-block" });
+  $(".logo_artistas").velocity( 'transition.slideRightIn' );
 
+  //CONTACTO
+  $(".titulo_contacto").velocity( 'transition.slideDownIn' , { display: "inline-block" });
+  $(".texto_contacto").velocity( 'transition.slideUpIn' );
 
   /*Código que activa o desactiva el sonido de la página de inicio al accionar el elemento*/
   var audio = $("#fidel")[0];
@@ -84,30 +90,6 @@ $(".nombre_artista_cubo").mouseenter(function() {
 
 
 
-
-
-
-/*$(".boton_formulario").click(function() {
-  $("#map").removeClass( "mapactivo" );
-  $(".formulario").toggleClass( "formularioactivo" );
-});
-$(".boton_mapa").click(function() {
-  $(".formulario").removeClass( "formularioactivo" );
-  $("#map").toggleClass( "mapactivo" );
-});*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(".boton_arriba").click(function() {
   $("#cubo").removeClass( "abajo_visible" );
   $("#cubo").addClass( "arriba_visible" );
@@ -127,6 +109,20 @@ $(".boton_frente").click(function() {
   $(".abajo").addClass( "opaco" );  
   $(".arriba").addClass( "opaco" );
 });
+
+
+
+
+
+
+$(".boton_ytplayer").click(function() {
+  $("#ytplayer").addClass( "ytplayer_visible" );
+});
+
+$(".boton_mapa").click(function() {
+  $("#contenedor_mapa").toggleClass( "mapa_visible" );
+});
+
 
 
 var map = L.map('map', {

@@ -91,8 +91,14 @@ a{
 /*
 	ADELANTE CON LA METRALLA (⌐■_■)--︻╦╤─ - - - (╥﹏╥) 
 */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 2px; background-color:rgba(0,0,0,0.3);}
+
+
 body{
 	font-family: 'Josefin Sans', sans-serif;
+	overflow-x:hidden; 
 }
 /******************************
 		LANDING
@@ -283,7 +289,6 @@ body{
 	.texto_manifesto{
 		font-family: 'Source Code Pro', monospace ;
 		display: none;
-		text-align: justify;
 		position: absolute;
 		top: 50px;
 		left: calc(50% - 345px);
@@ -310,12 +315,13 @@ body{
 	    width: 100% ;
 	    height: 2px;
 	    bottom: 0px;
-	    border-bottom: 1px solid rgba(0,0,0,0.3);
+	    border-bottom: 1px solid rgba(255,0,0,0.3);
 	    -webkit-transition:all .2s;
 	    transition:all .2s;
 	}
 	#musica span:hover::before{
 	    bottom: 7px;
+	    border-bottom: 1px solid rgba(0,0,0,0.3);
 	}
 	
 
@@ -323,19 +329,19 @@ body{
 		display: none;
 		text-transform: uppercase;
 		position: absolute;
-		right: 15px;
+		left: 159px;
 		color: rgba(0,0,0,0.6);
 		cursor: pointer;
 		font-size: 0.8rem;
 
 	}
 	.sonando{
-		color:red !important;
+		color:rgba(255,0,0,0.6) !important;
 	    -webkit-transition:all .2s;
 	    transition:all .2s;
 	}
 /***********************
-		SOUNDCLOUD PLAYER
+SOUNDCLOUD PLAYER
 ************************/
 	#player{
 		display: inline-block;
@@ -350,7 +356,7 @@ body{
 	.start-time,
 	.stop-time,
 	.mini-connect,
-	.mini-info,
+	/*.mini-info,*/
 	.mini-social{
 		display: none !important;
 	}
@@ -364,24 +370,98 @@ body{
 	  border:none;
 	}
 	.controls i{
-		color:rgba(0,0,0,0.6);
+		color:rgba(0,0,0,0.2);
+	}
+	.td.tdrow.player.light.mini {
+	    background: none !important;
+	}
+	.tdlarge-12.tdsmall-12.columns.artist-name{
+		display: none;
+	}
+	.td.player.mini {
+		font-size: 20px;
+	}
+	#player_roty{
+		position: absolute;
+		   top: -18px;
+		left: 130px;
+	    width: 350px;
+	}
+	.td.player.mini .mini-info{
+		border-left: none !important;
+	}
+	.td.player.light .info a, .td.player.light .mini-song-info a {
+	    color:rgba(0,0,0,0.3) !important;
+	    font-family: 'Josefin Sans', sans-serif !important;
+	}
+	.tdlarge-12.tdsmall-12.columns.song-name{
+	    margin-top: 3px !important;
 	}
 /***********************
      YOUTUBE PLAYER
 ************************/
 
-#ytplayer{
-	width: 695px;
-	height: 391px;
-	background-color: black;
-	opacity: 0;
-	transition: all .2s;
-	-webkit-transform: rotateX( -90deg ); 
-	transform: rotateX( -90deg ); 
-	-webkit-transform-origin:top;
-	transform-origin:top;
-}
-.filmografia{
+	#ytplayer{
+		width: 695px;
+		height: 391px;
+		/*background-color: black;
+		transition: all .2s;
+		-webkit-transform: rotateX( -90deg ); 
+		transform: rotateX( -90deg ); 
+		-webkit-transform-origin:top;
+		transform-origin:top;*/
+	}
+	.filmografia{
+			position: relative;
+			width: 695px;
+			margin: 150px auto;
+			
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-perspective:1000px;
+		perspective:1000px;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		}
+	.titulo_filmografia{
+			text-transform: uppercase;
+			display: inline-block;
+			font-size: 1.4rem;
+			font-weight: 300;
+			border:1px solid red;
+			padding: 10px;
+			height: 2.3rem;
+			margin-bottom: 25px;
+		}
+		.logo_filmografia {
+		    height: 46px;
+		    position: absolute;
+		    left: 350px;
+		    top: -4px;
+		}
+		.texto_filmografia{
+			font-family: 'Source Code Pro', monospace ;
+			/*text-align: justify;*/
+			font-size: 1rem;
+			font-weight: 300;
+			line-height: 150%;
+			margin-bottom: 25px;
+		}
+		.boton_ytplayer{
+			color: red;
+			cursor: pointer;
+		}
+
+		/*.ytplayer_visible{
+			opacity: 1 !important;
+			-webkit-transform: rotateX( 0deg ) !important; 
+			transform: rotateX( 0deg ) !important; 
+		}*/
+/***********************
+     MAPA CONTACTO
+************************/
+
+.contacto{
 		position: relative;
 		width: 695px;
 		margin: 150px auto;
@@ -393,9 +473,9 @@ body{
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	}
-.titulo_filmografia{
+.titulo_contacto{
 		text-transform: uppercase;
-		display: inline-block;
+		display: none;
 		font-size: 1.4rem;
 		font-weight: 300;
 		border:1px solid red;
@@ -403,12 +483,8 @@ body{
 		height: 2.3rem;
 		margin-bottom: 25px;
 	}
-	.logo_filmografia{
-		height: 40px;
-		position: absolute;
-		right: 0;
-	}
-	.texto_filmografia{
+	.texto_contacto{
+		display: none;
 		font-family: 'Source Code Pro', monospace ;
 		/*text-align: justify;*/
 		font-size: 1rem;
@@ -416,111 +492,117 @@ body{
 		line-height: 150%;
 		margin-bottom: 25px;
 	}
-	.boton_ytplayer{
+	.boton_mapa{
 		color: red;
 		cursor: pointer;
 	}
-
-	.ytplayer_visible{
+	#map { 
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#contenedor_mapa{
+	width: 695px;
+	height: 391px;
+	opacity: 0;
+	transition: all .2s;
+	-webkit-transform: rotateX( -90deg ); 
+	transform: rotateX( -90deg ); 
+	-webkit-transform-origin:top;
+	transform-origin:top;
+}
+	.mapa_visible{
 		opacity: 1 !important;
 		-webkit-transform: rotateX( 0deg ) !important; 
 		transform: rotateX( 0deg ) !important; 
 	}
-/***********************
-     MAPA CONTACTO
-************************/
-/*.contenedor_contacto{
-	font-size: 22px;
-	text-transform: uppercase;
-	text-align: justify;
-	width: 400px;
-	height: 506px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-}*/
-.contenedor_contacto span{
-	font-family: 'Rokkitt', serif;
-	color: red;
-	cursor: pointer;
-	vertical-align:2px; 
-}
-.formulario,
-#map { 
-	width: 500px;
-	height: 300px;
-	position: absolute;
-}	
-.leaflet-bar {
-  box-shadow: none; 
-  border-radius: none; 
-}
-.formularioactivo{
-	-webkit-transform: none !important;
-	transform:none !important;
-	opacity: 1 !important;
-}
+
 /***********************
      CONTACTO CUBO
 ************************/
 .contenedor_cubo{
-	width: 500px;
-	height: 300px;
+	width: 700px;
+	height: 500px;
 	position: relative;
-	top: 30vh;
-	left: calc(50% - 250px);
+	margin: 150px auto 0;
+	-webkit-perspective:1000px;
 	perspective:1000px;
 }
 #cubo{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	-webkit-transition: transform 1s;
-	-webkit-transform: translateZ(-100px);
+	-webkit-transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+	-webkit-transform: translateZ(-250px);
 	-webkit-transform-style: preserve-3d;
 	transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
-	transform: translateZ(-100px);
+	transform: translateZ(-250px);
 	transform-style: preserve-3d;
 }
-#cubo div{
-	width:  500px;
-	height:  300px;
+#cubo .lado{
+	width:  695px ;
+	height:  495px;
 	display: block;
 	position: absolute;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 #cubo .frente{ 
-	font-size: 30px;
 	text-align: justify;
-	-webkit-transform: rotateX(  0deg ) translateZ( 100px );
-	transform: rotateX(  0deg ) translateZ( 100px ); 
+	-webkit-transform: rotateX( 0deg ) translateZ( 250px )!important;
+	transform: rotateX( 0deg ) translateZ( 250px )!important; 
 }
+.texto_artista_interior,
+#cubo p {
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    line-height: 150%;
+}
+.texto_artista_interior{
+    padding: 10px;
+}
+.tzootz_artistas{ 
+	display: none;
+	padding: 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	border: 1px solid red;
+	display: inline-block;
+	height: 2.3rem;
+	margin-bottom: 15px;
+}
+.texto_artistas,
+.grupo{
+	display: none;
+}
+
 .arriba{ 
 	opacity: 0;
+	-webkit-transition: all .2s;
 	transition: all .2s;
-	-webkit-transform: rotateX(  90deg ) translateZ( 100px );
-	transform: rotateX(  90deg ) translateZ( 100px ); 
+	-webkit-transform: rotateX( -90deg ) translateZ( 250px ); 
+	transform: rotateX( -90deg ) translateZ( 250px ); 
 }
 .abajo{ 
 	opacity: 0;
+	-webkit-transition: all .2s;
 	transition: all .2s;
-	-webkit-transform: rotateX( -90deg ) translateZ( 100px ); 
-	transform: rotateX( -90deg ) translateZ( 100px ); 
+	-webkit-transform: rotateX( -90deg ) translateZ( 250px ); 
+	transform: rotateX( -90deg ) translateZ( 250px ); 
 }
 .frente_visible{ 
-	-webkit-transform: translateZ( -100px ) rotateY(    0deg ); 
-	transform: translateZ( -100px ) rotateY(    0deg ); 
+	-webkit-transform: translateZ( -250px ) rotateY(    0deg )!important; 
+	transform: translateZ( -250px ) rotateY(    0deg )!important; 
 }
 .arriba_visible{ 
-	-webkit-transform: translateZ( -100px ) rotateX(  -90deg )!important; 
-	transform: translateZ( -100px ) rotateX(  -90deg ) !important; 
+	-webkit-transform: translateZ( -250px ) rotateX(  90deg )!important; 
+	transform: translateZ( -250px ) rotateX(  90deg ) !important; 
 }
  .abajo_visible{ 
-	-webkit-transform: translateZ( -100px ) rotateX(   90deg )!important; 
-	transform: translateZ( -100px ) rotateX(   90deg )!important; 
+	-webkit-transform: translateZ( -250px ) rotateX(   90deg )!important; 
+	transform: translateZ( -250px ) rotateX(   90deg )!important; 
 }
 .opaco{
 	opacity:1;
@@ -532,18 +614,72 @@ body{
 	height: 15px;
 	position: absolute;
   right: 10px;
-  top: 30px;
+      top: 6px;
+    font-size: 20px;
   color: red;
 }
 .boton_abajo,
 .boton_arriba{
-	font-family: 'Rokkitt', serif;
-	color: red;
-	text-transform: uppercase;
-	cursor: pointer;
-	vertical-align:2px;
+	
+}
+.grupos{
+	margin-top: 10px;
+}
+.grupo{
+	position: relative;
 }
 
+.nombre_artista{
+	color: red;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	font-size: 1.7rem;
+	font-weight: 300;
+}
+.artista_interior {
+    float: left;
+    padding: 15px 15px 3px;
+}
+.nombre_artista_cubo{
+	padding-left: 40px;
+	padding-top: 15px;
+	margin-left: 140px;
+	color: red;
+	/*text-transform: uppercase;*/
+	cursor: pointer;
+	/*border-bottom: 1px solid rgba(0, 0, 0, 0.5);*/
+	font-size: 1.7rem;
+	font-weight: 300;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+.nombre_artista_cubo::after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 80%;
+    left: 140px;
+    -webkit-transition: all .2s;
+	transition: all .2s;
+}
+.nombre_artista_cubo:hover::after {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    bottom: 13px;
+}
+
+#vector{
+	width: 100px;
+	height: 20px;
+	position: absolute;
+}
+
+.logo_artistas {
+    display: none;
+    height: 40px;
+    position: absolute;
+    left: 250px;
+    top: -2px;
+}
 
 
 

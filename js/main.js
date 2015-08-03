@@ -43,7 +43,7 @@ $(".nombre_artista_cubo").mouseenter(function() {
 });
 
 
- /*secuencia de animación de entrada de la página del FILMOGRAFÍA*/
+ /*secuencia de animación de entrada de la página de FILMOGRAFÍA
   var visitaArtista = $(".visita_artista");
   var artista = $(".artista");
 
@@ -54,7 +54,7 @@ $(".nombre_artista_cubo").mouseenter(function() {
   artista.mouseleave(function() {
     $(".visita_artista",this).velocity( 'transition.slideDownOut' );
     $(".titulo_artista",this).velocity( 'transition.slideUpOut' );
-  });
+  });*/
 
 /*Código que activa o desactiva el sonido en el grid de artistas*/
   var tema_roty = $("#roty")[0],
@@ -87,24 +87,41 @@ $(".nombre_artista_cubo").mouseenter(function() {
     tema_crackin.pause()
   });
 
-$(".boton_arriba").click(function() {
-  $("#cubo").removeClass( "abajo_visible" );
-  $("#cubo").addClass( "arriba_visible" );
-  $(".arriba").addClass( "opaco" );
-  $(".abajo").removeClass( "opaco" );
-});
-$(".boton_abajo").click(function() {
-  $("#cubo").removeClass( "arriba_visible" );
+$(".boton_roty").click(function() {
   $("#cubo").addClass( "abajo_visible" );
-  $(".abajo").addClass( "opaco" );  
-  $(".arriba").removeClass( "opaco" );
+  $(".lado_roty").addClass( "opaco" ); 
+  $(".lado_crackin").removeClass( "opaco" );
+  $(".lado_quartet").removeClass( "opaco" );
+  $(".lado_aphotek").removeClass( "opaco" );
 });
+
+$(".boton_crackin").click(function() {
+  $("#cubo").addClass( "abajo_visible" );
+  $(".lado_crackin").addClass( "opaco" ); 
+  $(".lado_roty").removeClass( "opaco" );
+  $(".lado_quartet").removeClass( "opaco" );
+  $(".lado_aphotek").removeClass( "opaco" );
+});
+
+$(".boton_quartet").click(function() {
+  $("#cubo").addClass( "abajo_visible" );
+  $(".lado_quartet").addClass( "opaco" ); 
+  $(".lado_crackin").removeClass( "opaco" );
+  $(".lado_roty").removeClass( "opaco" );
+  $(".lado_aphotek").removeClass( "opaco" );
+});
+
+$(".boton_aphotek").click(function() {
+  $("#cubo").addClass( "abajo_visible" );
+  $(".lado_aphotek").addClass( "opaco" ); 
+  $(".lado_crackin").removeClass( "opaco" );
+  $(".lado_quartet").removeClass( "opaco" );
+  $(".lado_roty").removeClass( "opaco" );
+});
+
 $(".boton_frente").click(function() {
-  $("#cubo").removeClass( "arriba_visible" );
   $("#cubo").removeClass( "abajo_visible" );
   $("#cubo").addClass( "frente_visible" );
-  $(".abajo").addClass( "opaco" );  
-  $(".arriba").addClass( "opaco" );
 });
 
 
